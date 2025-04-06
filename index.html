@@ -7,13 +7,10 @@
 </head>
 <body>
   <p>正在跳转到 QQ 群...</p>
+  <a id="redirectLink" href="https://qm.qq.com/q/ECu6CjixhY" style="display:none;">跳转</a>
   <script>
-    // 自动跳转到 QQ 群邀请链接
-    window.location.href = "https://qm.qq.com/q/ECu6CjixhY";
-    // 备用：尝试直接唤起 QQ 深层链接（如果支持）
-    setTimeout(() => {
-      window.location.href = "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=1029201916";
-    }, 500); // 500ms 后尝试深层链接
+    // 模拟用户点击
+    document.getElementById("redirectLink").click();
   </script>
 </body>
 </html>
