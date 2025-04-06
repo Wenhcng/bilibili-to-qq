@@ -6,11 +6,18 @@
   <title>跳转中...</title>
 </head>
 <body>
-  <p>正在跳转到 QQ 群...</p>
-  <a id="redirectLink" href="https://qm.qq.com/q/ECu6CjixhY" style="display:none;">跳转</a>
+  <p>正在尝试跳转到 QQ 群...</p>
+  <a id="qqLink" href="https://qm.qq.com/q/ECu6CjixhY" style="display:none;">打开 QQ</a>
   <script>
-    // 模拟用户点击
-    document.getElementById("redirectLink").click();
+    // 尝试直接触发 QQ 链接
+    setTimeout(() => {
+      document.getElementById("qqLink").click();
+    }, 500);
+
+    // 如果失败，尝试嵌套 Bilibili 跳转
+    setTimeout(() => {
+      window.location.href = "https://d.bilibili.com/download_app.html?&preUrl=https%3A%2F%2Fqm.qq.com%2Fq%2FECu6CjixhY&schema=bilibili%3A%2F%2Fbrowser%2F%3Furl%3Dhttps%3A%2F%2Fqm.qq.com%2Fq%2FECu6CjixhY";
+    }, 1000);
   </script>
 </body>
 </html>
